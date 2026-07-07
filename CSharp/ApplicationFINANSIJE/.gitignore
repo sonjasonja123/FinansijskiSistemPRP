@@ -1,0 +1,35 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build
+bin/
+obj/
+
+# Rider / ReSharper
+_ReSharper*/
+*.DotSettings.user
+
+# NuGet
+packages/
+
+# SQL Server
+*.mdf
+*.ldf
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Publish
+publish/
+
+# Test output
+TestResults/

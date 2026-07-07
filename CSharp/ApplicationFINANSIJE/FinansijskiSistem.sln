@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35521.163
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationFINANSIJE", "ApplicationFINANSIJE.csproj", "{EF14375A-AC55-4C14-9276-34E990D16F22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationKONTROLA", "..\ApplicationKONTROLA\ApplicationKONTROLA.csproj", "{A0D276CA-6343-4890-94B9-A5A9C1789715}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinansijskiSistemCLR", "..\Class Library (.NET Framework)\FinansijskiSistemCLR.csproj", "{93D87513-DD96-499A-A0B6-32E766A958D6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{08FCDB16-5925-4FB3-B6C7-2C5F7B598CFC}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{E3414B6D-DC16-4368-A3C5-1F128093F4A5}"
+	ProjectSection(SolutionItems) = preProject
+		D:\Users\SonjaS\Downloads\FinansijskiSistem_nove_skripte_v2\SQL\01_Baza.sql = D:\Users\SonjaS\Downloads\FinansijskiSistem_nove_skripte_v2\SQL\01_Baza.sql
+		D:\Users\SonjaS\Downloads\FinansijskiSistem_nove_skripte_v2\SQL\02_Tabele.sql = D:\Users\SonjaS\Downloads\FinansijskiSistem_nove_skripte_v2\SQL\02_Tabele.sql
+		D:\Users\SonjaS\Downloads\FinansijskiSistem_nove_skripte_v2\SQL\03_DemoPodaci.sql = D:\Users\SonjaS\Downloads\FinansijskiSistem_nove_skripte_v2\SQL\03_DemoPodaci.sql
+		D:\Users\SonjaS\Downloads\FinansijskiSistem_nove_skripte_v2\SQL\04_NaprednaStruktura.sql = D:\Users\SonjaS\Downloads\FinansijskiSistem_nove_skripte_v2\SQL\04_NaprednaStruktura.sql
+		D:\Users\SonjaS\Downloads\FinansijskiSistem_nove_skripte_v2\SQL\05_Repository.sql = D:\Users\SonjaS\Downloads\FinansijskiSistem_nove_skripte_v2\SQL\05_Repository.sql
+		D:\Users\SonjaS\Downloads\FinansijskiSistem_nove_skripte_v2\SQL\06_API.sql = D:\Users\SonjaS\Downloads\FinansijskiSistem_nove_skripte_v2\SQL\06_API.sql
+		D:\Users\SonjaS\Downloads\FinansijskiSistem_nove_skripte_v2\SQL\07_Security.sql = D:\Users\SonjaS\Downloads\FinansijskiSistem_nove_skripte_v2\SQL\07_Security.sql
+		D:\Users\SonjaS\Downloads\FinansijskiSistem_nove_skripte_v2\SQL\08_Triggeri.sql = D:\Users\SonjaS\Downloads\FinansijskiSistem_nove_skripte_v2\SQL\08_Triggeri.sql
+		D:\Users\SonjaS\Downloads\FinansijskiSistem_nove_skripte_v2\SQL\09_CLR.sql = D:\Users\SonjaS\Downloads\FinansijskiSistem_nove_skripte_v2\SQL\09_CLR.sql
+		D:\Users\SonjaS\Downloads\FinansijskiSistem_nove_skripte_v2\SQL\10_Testovi.sql = D:\Users\SonjaS\Downloads\FinansijskiSistem_nove_skripte_v2\SQL\10_Testovi.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dokumentacija", "Dokumentacija", "{14A1FE53-5D8A-4D48-BBD6-91C81DBE6E61}"
+	ProjectSection(SolutionItems) = preProject
+		D:\Users\SonjaS\Downloads\FinansijskiSistem_PRP.pdf = D:\Users\SonjaS\Downloads\FinansijskiSistem_PRP.pdf
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF14375A-AC55-4C14-9276-34E990D16F22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF14375A-AC55-4C14-9276-34E990D16F22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF14375A-AC55-4C14-9276-34E990D16F22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF14375A-AC55-4C14-9276-34E990D16F22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0D276CA-6343-4890-94B9-A5A9C1789715}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0D276CA-6343-4890-94B9-A5A9C1789715}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0D276CA-6343-4890-94B9-A5A9C1789715}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0D276CA-6343-4890-94B9-A5A9C1789715}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93D87513-DD96-499A-A0B6-32E766A958D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93D87513-DD96-499A-A0B6-32E766A958D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93D87513-DD96-499A-A0B6-32E766A958D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93D87513-DD96-499A-A0B6-32E766A958D6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
