@@ -23,85 +23,142 @@ public class FinansijeService
 
     public void UnesiTransakciju()
     {
-        Console.Write("Id kompanije: ");
-        int idKompanije = int.Parse(Console.ReadLine()!);
+        try
+        {
+            Console.Write("Id kompanije: ");
+            int idKompanije = int.Parse(Console.ReadLine()!);
 
-        Console.Write("Iznos: ");
-        decimal iznos = decimal.Parse(Console.ReadLine()!);
+            Console.Write("Iznos: ");
+            decimal iznos = decimal.Parse(Console.ReadLine()!);
 
-        Console.Write("Tip transakcije (Приход/Расход/Пренос/Повраћај): ");
-        string tipTr = Console.ReadLine()!;
+            Console.Write("Tip transakcije (Приход/Расход/Пренос/Повраћај): ");
+            string tipTr = Console.ReadLine()!;
 
-        Console.Write("Opis: ");
-        string opis = Console.ReadLine()!;
+            Console.Write("Opis: ");
+            string opis = Console.ReadLine()!;
 
-        using SqlCommand cmd = new SqlCommand("api_finansije.UnesiTransakciju", _connection);
-        cmd.CommandType = CommandType.StoredProcedure;
+            using SqlCommand cmd = new SqlCommand("api_finansije.UnesiTransakciju", _connection);
+            cmd.CommandType = CommandType.StoredProcedure;
 
-        cmd.Parameters.AddWithValue("@idKompanije", idKompanije);
-        cmd.Parameters.AddWithValue("@iznos", iznos);
-        cmd.Parameters.AddWithValue("@tipTr", tipTr);
-        cmd.Parameters.AddWithValue("@datVreme", DateTime.Now);
-        cmd.Parameters.AddWithValue("@opis", opis);
+            cmd.Parameters.AddWithValue("@idKompanije", idKompanije);
+            cmd.Parameters.AddWithValue("@iznos", iznos);
+            cmd.Parameters.AddWithValue("@tipTr", tipTr);
+            cmd.Parameters.AddWithValue("@datVreme", DateTime.Now);
+            cmd.Parameters.AddWithValue("@opis", opis);
 
-        cmd.ExecuteNonQuery();
+            cmd.ExecuteNonQuery();
 
-        Console.WriteLine("Transakcija je uspešno uneta.");
+            Console.WriteLine("Transakcija je uspešno uneta.");
+        }
+        catch (FormatException)
+        {
+            Console.WriteLine("Greška: uneta vrednost nije u očekivanom formatu (broj).");
+        }
+        catch (SqlException ex)
+        {
+            Console.WriteLine($"Greška iz baze: {ex.Message}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Neočekivana greška: {ex.Message}");
+        }
     }
 
     public void AzurirajTransakciju()
     {
-        Console.Write("Id transakcije: ");
-        int id = int.Parse(Console.ReadLine()!);
+        try
+        {
+            Console.Write("Id transakcije: ");
+            int id = int.Parse(Console.ReadLine()!);
 
-        Console.Write("Novi iznos: ");
-        decimal iznos = decimal.Parse(Console.ReadLine()!);
+            Console.Write("Novi iznos: ");
+            decimal iznos = decimal.Parse(Console.ReadLine()!);
 
-        Console.Write("Tip transakcije (Приход/Расход/Пренос/Повраћај): ");
-        string tipTr = Console.ReadLine()!;
+            Console.Write("Tip transakcije (Приход/Расход/Пренос/Повраћај): ");
+            string tipTr = Console.ReadLine()!;
 
-        Console.Write("Novi opis: ");
-        string opis = Console.ReadLine()!;
+            Console.Write("Novi opis: ");
+            string opis = Console.ReadLine()!;
 
-        using SqlCommand cmd = new SqlCommand("api_finansije.AzurirajTransakciju", _connection);
-        cmd.CommandType = CommandType.StoredProcedure;
+            using SqlCommand cmd = new SqlCommand("api_finansije.AzurirajTransakciju", _connection);
+            cmd.CommandType = CommandType.StoredProcedure;
 
-        cmd.Parameters.AddWithValue("@id", id);
-        cmd.Parameters.AddWithValue("@iznos", iznos);
-        cmd.Parameters.AddWithValue("@tipTr", tipTr);
-        cmd.Parameters.AddWithValue("@datVreme", DateTime.Now);
-        cmd.Parameters.AddWithValue("@opis", opis);
+            cmd.Parameters.AddWithValue("@id", id);
+            cmd.Parameters.AddWithValue("@iznos", iznos);
+            cmd.Parameters.AddWithValue("@tipTr", tipTr);
+            cmd.Parameters.AddWithValue("@datVreme", DateTime.Now);
+            cmd.Parameters.AddWithValue("@opis", opis);
 
-        cmd.ExecuteNonQuery();
+            cmd.ExecuteNonQuery();
 
-        Console.WriteLine("Transakcija je uspešno ažurirana.");
+            Console.WriteLine("Transakcija je uspešno ažurirana.");
+        }
+        catch (FormatException)
+        {
+            Console.WriteLine("Greška: uneta vrednost nije u očekivanom formatu (broj).");
+        }
+        catch (SqlException ex)
+        {
+            Console.WriteLine($"Greška iz baze: {ex.Message}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Neočekivana greška: {ex.Message}");
+        }
     }
 
     public void ObrisiTransakciju()
     {
-        Console.Write("Id transakcije za brisanje: ");
-        int id = int.Parse(Console.ReadLine()!);
+        try
+        {
+            Console.Write("Id transakcije za brisanje: ");
+            int id = int.Parse(Console.ReadLine()!);
 
-        using SqlCommand cmd = new SqlCommand("api_finansije.ObrisiTransakciju", _connection);
-        cmd.CommandType = CommandType.StoredProcedure;
-        cmd.Parameters.AddWithValue("@id", id);
+            using SqlCommand cmd = new SqlCommand("api_finansije.ObrisiTransakciju", _connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@id", id);
 
-        cmd.ExecuteNonQuery();
+            cmd.ExecuteNonQuery();
 
-        Console.WriteLine("Transakcija je uspešno obrisana.");
+            Console.WriteLine("Transakcija je uspešno obrisana.");
+        }
+        catch (FormatException)
+        {
+            Console.WriteLine("Greška: uneta vrednost nije u očekivanom formatu (broj).");
+        }
+        catch (SqlException ex)
+        {
+            Console.WriteLine($"Greška iz baze: {ex.Message}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Neočekivana greška: {ex.Message}");
+        }
     }
+
     public void PrikaziTransakcije()
     {
-        Console.WriteLine("=== TRANSAKCIJE ===");
-
-        using SqlCommand cmd = new SqlCommand("SELECT * FROM api_finansije.TRANSAKCIJE", _connection);
-        using SqlDataReader reader = cmd.ExecuteReader();
-
-        while (reader.Read())
+        try
         {
-            Console.WriteLine(
-                $"{reader["Id"]} | {reader["NazivKompanije"]} | {reader["Iznos"]} | {reader["TipTr"]} | {reader["DatVreme"]} | {reader["Opis"]}"
-            );
+            Console.WriteLine("=== TRANSAKCIJE ===");
+
+            using SqlCommand cmd = new SqlCommand("SELECT * FROM api_finansije.TRANSAKCIJE", _connection);
+            using SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Console.WriteLine(
+                    $"{reader["Id"]} | {reader["NazivKompanije"]} | {reader["Iznos"]} | {reader["TipTr"]} | {reader["DatVreme"]} | {reader["Opis"]}"
+                );
+            }
+        }
+        catch (SqlException ex)
+        {
+            Console.WriteLine($"Greška iz baze: {ex.Message}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Neočekivana greška: {ex.Message}");
         }
     }
 }

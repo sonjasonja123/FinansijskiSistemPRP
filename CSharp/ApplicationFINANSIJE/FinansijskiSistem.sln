@@ -27,6 +27,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{E3414B6D-DC1
 		D:\Users\SonjaS\Downloads\FinansijskiSistem_nove_skripte_v2\SQL\08_Triggeri.sql = D:\Users\SonjaS\Downloads\FinansijskiSistem_nove_skripte_v2\SQL\08_Triggeri.sql
 		D:\Users\SonjaS\Downloads\FinansijskiSistem_nove_skripte_v2\SQL\09_CLR.sql = D:\Users\SonjaS\Downloads\FinansijskiSistem_nove_skripte_v2\SQL\09_CLR.sql
 		D:\Users\SonjaS\Downloads\FinansijskiSistem_nove_skripte_v2\SQL\10_Testovi.sql = D:\Users\SonjaS\Downloads\FinansijskiSistem_nove_skripte_v2\SQL\10_Testovi.sql
+		D:\Users\SonjaS\Downloads\11_ParticionisanjeIspravka.sql = D:\Users\SonjaS\Downloads\11_ParticionisanjeIspravka.sql
+		D:\Users\SonjaS\Downloads\12_LanacIXml.sql = D:\Users\SonjaS\Downloads\12_LanacIXml.sql
+		D:\Users\SonjaS\Downloads\13_CLR_ExternalAccess.sql = D:\Users\SonjaS\Downloads\13_CLR_ExternalAccess.sql
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dokumentacija", "Dokumentacija", "{14A1FE53-5D8A-4D48-BBD6-91C81DBE6E61}"
