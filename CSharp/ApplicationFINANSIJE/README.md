@@ -29,6 +29,3 @@ Programiranje i podaci (PRP)
 8. Pokrenuti ApplicationFINANSIJE.
 9. Pokrenuti ApplicationKONTROLA.
 
-## Napomena
-
-Originalni `09_CLR.sql` se više ne koristi — u potpunosti ga zamenjuje `13_CLR_ExternalAccess.sql`.
